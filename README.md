@@ -21,11 +21,61 @@
 
 <h3>Prerequisites</h3>
 
-Here you list all prerequisites necessary for running your project. For example:
-
 - [Java JDK 17]([https://github.com/](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html))
-- [Git 2](https://github.com)
-  
+- IDE da preferência (IntelliJ, VSCode, Eclipse, etc)
+
+<h3>Cloning</h3>
+
+```bash
+git clone (https://github.com/henrique0120/league-api)
+```
+<h3>Starting</h3>
+
+```bash
+mvnw.cmd clean install
+mvnw.cmd spring-boot:run
+```
+
+<h2 id="routes">📍 API Endpoints</h2>
+
+| route               | description                                          
+|----------------------|-----------------------------------------------------
+| <kbd>GET /summoner</kbd>     |  recupera as informações com base nos dados da conta informada.
+
+<h3 id="get-auth-detail">GET /authenticate</h3>
+
+<p>A consulta é realizada informando pares de chave valor:- gameName - tagLine - region de contas do League Of Legends.</p>
+
+**RESPONSE**
+```json
+[
+    {
+        "gameName": "xxxxx",
+        "tagLine": "br1",
+        "summonerLevel": 396,
+        "queueType": "RANKED_FLEX_SR",
+        "tier": "DIAMOND",
+        "rank": "I",
+        "leaguePoints": 75,
+        "wins": 38,
+        "losses": 6
+    },
+    {
+        "gameName": "xxxxx",
+        "tagLine": "xxxxxx",
+        "summonerLevel": 396,
+        "queueType": "RANKED_SOLO_5x5",
+        "tier": "CHALLENGER",
+        "rank": "I",
+        "leaguePoints": 642,
+        "wins": 116,
+        "losses": 90
+    }
+]
+```
+
+
+
 ## Diagrama de Classes
 
 ```mermaid
