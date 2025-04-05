@@ -15,7 +15,12 @@ public class SummonerResponse {
 
 
     public SummonerResponse(String gameName, String tagLine, int summonerLevel, String queueType, String tier, String rank, int leaguePoints, int wins, int losses) {
+<<<<<<< HEAD
 
+=======
+        this.gameName = gameName;
+        this.tagLine = tagLine;
+>>>>>>> 0847c75125be96d33fae4c4fd08dc366974d5478
         this.summonerLevel = summonerLevel;
         this.queueType = queueType;
         this.tier = tier;
@@ -23,8 +28,11 @@ public class SummonerResponse {
         this.leaguePoints = leaguePoints;
         this.wins = wins;
         this.losses = losses;
+<<<<<<< HEAD
         this.gameName = gameName;
         this.tagLine = tagLine;
+=======
+>>>>>>> 0847c75125be96d33fae4c4fd08dc366974d5478
     }
 
     public String getGameName() {
