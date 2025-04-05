@@ -1,20 +1,16 @@
 package com.henrique.League_API.service;
 
-<<<<<<< HEAD
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.henrique.League_API.dto.RiotAccountDto;
 import org.springframework.beans.factory.annotation.Value;
-=======
->>>>>>> 0847c75125be96d33fae4c4fd08dc366974d5478
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
 public class RiotApiService {
 
-<<<<<<< HEAD
     @Value("${riot.api.key}")
     private String riotApiKey;
 
@@ -48,6 +44,7 @@ public class RiotApiService {
         return restTemplate.getForObject(url, String.class);
     }
 
+    // 🔁 Este método converte "br1" → "americas", "euw1" → "europe" etc.
     private String getAccountRouting(String region) {
         switch (region) {
             case "br1":
@@ -68,21 +65,3 @@ public class RiotApiService {
         }
     }
 }
-=======
-    private final RestTemplate restTemplate = new RestTemplate();
-
-    public String getAccountByRiotID(String apiUrl) {
-        // Realiza a requisição HTTP para a API da Riot Games
-        return restTemplate.getForObject(apiUrl, String.class);
-    }
-
-    public String getAccountLevel(String apiURL){
-        return restTemplate.getForObject(apiURL, String.class);
-    }
-
-    public String getRankedStats(String apiURL){
-        return restTemplate.getForObject(apiURL, String.class);
-    }
-
-}
->>>>>>> 0847c75125be96d33fae4c4fd08dc366974d5478
