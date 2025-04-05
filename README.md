@@ -25,7 +25,7 @@
 <h3>Cloning</h3>
 
 ```bash
-git clone (https://github.com/henrique0120/league-api)
+git clone https://github.com/henrique0120/league-api
 ```
 <h3>Starting</h3>
 
